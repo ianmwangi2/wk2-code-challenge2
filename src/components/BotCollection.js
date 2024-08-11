@@ -1,4 +1,5 @@
 import React from 'react'
+import BotCard from './BotCard';
 
 function BotCollection({ handleEnlist, handleDelete, showDetails, filteredBots }) {
     const [bots, setBots] = useState([]);
@@ -10,7 +11,7 @@ function BotCollection({ handleEnlist, handleDelete, showDetails, filteredBots }
     }, []);
   
     const displayedBots = filteredBots(bots);
-    
+
   return (
     <div className='bot-collection'>
       {displayedBots.length ? (
