@@ -23,10 +23,10 @@ function App() {
   };
 
   const deleteBot = (id) => {
-    fetch(`http://localhost:3000/bots/${id}`, { method: 'DELETE' })
+    fetch(`https://wk2-backend.vercel.app/bots/${id}`, { method: 'DELETE' })
       .then(() => {
         setArmy(army.filter((bot) => bot.id !== id));
-        fetch('http://localhost:3000/bots')
+        fetch('https://wk2-backend.vercel.app/bots')
           .then((resp) => resp.json())
           .then((data) => setArmy(data));
       });

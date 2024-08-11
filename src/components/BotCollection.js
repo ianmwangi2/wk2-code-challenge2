@@ -5,7 +5,7 @@ function BotCollection({ handleEnlist, handleDelete, showDetails, filteredBots }
   const [bots, setBots] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/bots')
+    fetch('https://wk2-backend.vercel.app/bots')
       .then((resp) => resp.json())
       .then((data) => setBots(data));
   }, []);
