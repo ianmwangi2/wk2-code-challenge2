@@ -46,3 +46,8 @@ Here is the deployed server from vercel:
 [Back-end](https://wk2-backend.vercel.app/bots)
 
 ### Live link
+The deployed live link for this project is:
+[Live-link] (https://wk2-code-challenge2.vercel.app/)
+
+## AUTHORS
+- [Ian Mwangi](https://github.com/ianmwangi2)
