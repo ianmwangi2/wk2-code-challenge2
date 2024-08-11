@@ -1,4 +1,5 @@
 import React from 'react'
+import BotSpecs from './components/BotSpecs'
 
 function App() {
   return (
