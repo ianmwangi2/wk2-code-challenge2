@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SortBar() {
+function SortBar({handleSort}) {
   return (
     <div className='sort-bar'>
       <div className='sort'>
