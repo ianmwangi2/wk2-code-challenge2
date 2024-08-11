@@ -44,3 +44,5 @@ Bot battlr in a react-based web-page that allows users to,browse, enlist and man
 Deployed the link to vercel in order for the code to work without running live server.
 Here is the deployed server from vercel:
 [Back-end](https://wk2-backend.vercel.app/bots)
+
+### Live link
