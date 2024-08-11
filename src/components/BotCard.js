@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BotCard() {
+function BotCard({ bot, handleEnlist, handleDelete, showDetails }) {
     return (
         <div className="bot-card">
           <img src={bot.avatar_url} alt={bot.name} />
