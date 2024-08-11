@@ -1,5 +1,9 @@
-import React from 'react'
-import BotSpecs from './components/BotSpecs'
+import BotCollection from './components/BotCollection';
+import YourBotArmy from './components/YourBotArmy';
+import BotSpecs from './components/BotSpecs';
+import SortBar from './components/SortBar';
+import FilterBar from './components/FilterBar';
+import './App.css';
 
 function App() {
   return (
