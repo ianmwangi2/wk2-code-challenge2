@@ -12,6 +12,16 @@ function App() {
   const [sortCriteria, setSortCriteria] = useState(null);
   const [filters, setFilters] = useState([]);
 
+  const deleteBot = (id) => {
+    fetch(`http://localhost:3000/bots/${id}`, { method: 'DELETE' })
+      .then(() => {
+        setArmy(army.filter((bot) => bot.id !== id));
+        fetch('http://localhost:3000/bots')
+          .then((resp) => resp.json())
+          .then((data) => setArmy(data));
+      });
+  };
+  
   return (
     <div className="App">
       {selectedBot ? (
