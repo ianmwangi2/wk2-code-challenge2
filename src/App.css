@@ -1,38 +1,130 @@
 .App {
   text-align: center;
+  padding: 20px;
+  background-color: blue;
+}
+h1 {
+  font-style: italic;
+}
+.bot-collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bot-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bot-card:hover {
+  transform: scale(1.05);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bot-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.bot-card h3 {
+  margin: 10px 0;
+}
+
+.bot-card p {
+  margin: 5px 0;
+}
+
+.bot-card button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bot-card button:hover {
+  background-color: #0056b3;
+}
+
+.sort-bar, .filter-bar {
+  margin-bottom: 20px;
+}
+
+.sort-bar button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sort-bar button:hover {
+  background-color: #218838;
+}
+
+.filter-bar label {
+  margin-right: 10px;
+}
+
+.bot-specs {
+  text-align: center;
+  padding: 20px;
+}
+
+.bot-specs img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.bot-specs button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bot-specs button:hover {
+  background-color: #0056b3;
+}
+
+.filter-bar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.filter-bar input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter-classes {
+  display: flex;
+  flex-wrap: wrap;
 }
+
+.filter-classes label {
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.filter-classes input[type="checkbox"] {
+  margin-right: 5px;
+}
+
