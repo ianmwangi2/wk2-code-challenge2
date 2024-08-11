@@ -12,6 +12,16 @@ function App() {
   const [sortCriteria, setSortCriteria] = useState(null);
   const [filters, setFilters] = useState([]);
 
+  const enlistBot = (bot) => {
+    if (!army.some((b) => b.id === bot.id)) {
+      setArmy([...army, bot]);
+    }
+  };
+
+  const releaseBot = (id) => {
+    setArmy(army.filter((bot) => bot.id !== id));
+  };
+
   const deleteBot = (id) => {
     fetch(`http://localhost:3000/bots/${id}`, { method: 'DELETE' })
       .then(() => {
@@ -21,7 +31,30 @@ function App() {
           .then((data) => setArmy(data));
       });
   };
-  
+
+  const handleSort = (criteria) => {
+    setSortCriteria(criteria);
+  };
+
+  const handleFilter = (botClass, isChecked) => {
+    if (isChecked) {
+      setFilters([...filters, botClass]);
+    } else {
+      setFilters(filters.filter((cls) => cls !== botClass));
+    }
+  };
+
+  const filteredBots = (bots) => {
+    let result = [...bots];
+    if (filters.length > 0) {
+      result = result.filter((bot) => filters.includes(bot.bot_class));
+    }
+    if (sortCriteria) {
+      result.sort((a, b) => b[sortCriteria] - a[sortCriteria]);
+    }
+    return result;
+  };
+
   return (
     <div className="App">
       {selectedBot ? (
@@ -48,4 +81,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
